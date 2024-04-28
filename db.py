@@ -2,7 +2,7 @@ import sqlite3
 
 class DataBase:
     def __init__ (self, banco_dados):
-        self.concertarBanco(banco_dados)
+        self.conconcertarBanco(banco_dados)
 
     def conconcertarBanco(self, banco_dados):
         self.banco = sqlite3.connect(banco_dados)
@@ -39,7 +39,7 @@ class DataBase:
             print("Erro ao salvar produto!")
             return False
         
-    def buscarDados(self, tabela campos = '*'):
+    def buscarDados(self, tabela, campos = '*'):
         sql = f"SELECT {campos} from {dados}"
         self.cursor.execute(sql)
 
